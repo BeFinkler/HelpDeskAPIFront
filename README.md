@@ -2,7 +2,15 @@
 
 Cliente Web independente do [HelpDeskAPIBack](https://github.com/BeFinkler/HelpDeskAPIBack), com React, Vite, React Router e JavaScript. Consome JSON por `fetch` e não acessa o banco diretamente.
 
-Implementação validada localmente com a API real e o build de produção no navegador. Consulte [as evidências e os limites da homologação](docs/STATUS_IMPLEMENTACAO.md).
+Implementação validada localmente e homologada em produção contra a API e o MySQL reais. Consulte [as evidências da homologação](docs/STATUS_IMPLEMENTACAO.md).
+
+## Produção
+
+- Front-end: [https://helpdesk-befinkler.vercel.app](https://helpdesk-befinkler.vercel.app)
+- API: [https://helpdesk-api-befinkler.onrender.com](https://helpdesk-api-befinkler.onrender.com)
+- Swagger UI: [https://helpdesk-api-befinkler.onrender.com/api-docs](https://helpdesk-api-befinkler.onrender.com/api-docs)
+
+O front-end foi publicado pela Vercel a partir da branch `main`. A variável `VITE_API_URL` aponta para `https://helpdesk-api-befinkler.onrender.com/api/v1`.
 
 ## Funcionalidades
 
