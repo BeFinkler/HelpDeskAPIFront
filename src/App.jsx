@@ -13,17 +13,35 @@ import { Link } from 'react-router-dom';
 export default function App() {
   const { user } = useAuth();
   const location = useLocation();
-  useEffect(() => { window.scrollTo(0, 0); }, [location.pathname]);
-  return <Routes>
-    <Route path="/login" element={<AuthPage key="login" />} />
-    <Route path="/cadastro" element={<AuthPage key="cadastro" register />} />
-    <Route element={<ProtectedRoute />}><Route element={<Layout key={user?.id} />}>
-      <Route index element={<Navigate to="/painel" replace />} />
-      <Route path="/painel" element={<Dashboard />} />
-      <Route path="/chamados" element={<Tickets />} />
-      <Route path="/chamados/novo" element={<NewTicket />} />
-      <Route path="/chamados/:id" element={<TicketDetail key={location.pathname} />} />
-      <Route path="*" element={<div className="not-found"><span>404</span><h1>Este caminho não foi encontrado</h1><p>Volte ao seu painel para continuar.</p><Link className="button button-primary" to="/painel">Ir para o painel</Link></div>} />
-    </Route></Route>
-  </Routes>;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+  return (
+    <Routes>
+      <Route path="/login" element={<AuthPage key="login" />} />
+      <Route path="/cadastro" element={<AuthPage key="cadastro" register />} />
+      <Route element={<ProtectedRoute />}>
+        <Route element={<Layout key={user?.id} />}>
+          <Route index element={<Navigate to="/painel" replace />} />
+          <Route path="/painel" element={<Dashboard />} />
+          <Route path="/chamados" element={<Tickets />} />
+          <Route path="/chamados/novo" element={<NewTicket />} />
+          <Route path="/chamados/:id" element={<TicketDetail key={location.pathname} />} />
+          <Route
+            path="*"
+            element={
+              <div className="not-found">
+                <span>404</span>
+                <h1>Este caminho não foi encontrado</h1>
+                <p>Volte ao seu painel para continuar.</p>
+                <Link className="button button-primary" to="/painel">
+                  Ir para o painel
+                </Link>
+              </div>
+            }
+          />
+        </Route>
+      </Route>
+    </Routes>
+  );
 }
