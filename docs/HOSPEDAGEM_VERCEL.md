@@ -168,9 +168,9 @@ O Render gratuito suspende o serviço após 15 minutos sem tráfego. O primeiro 
 
 ```text
 2. APLICAÇÃO 2: HELPDESK (ARQUITETURA REST)
-* Link da API Backend (Render): [URL real verificada]
-* Link da Documentação Swagger: [URL real da API]/api-docs
-* Link do Frontend Consumidor (Vercel): [URL estável verificada]
+* Link da API Backend (Render): https://helpdesk-api-befinkler.onrender.com
+* Link da Documentação Swagger: https://helpdesk-api-befinkler.onrender.com/api-docs
+* Link do Frontend Consumidor (Vercel): https://helpdesk-befinkler.vercel.app
 * Link do Repositório GitHub (API Backend): https://github.com/BeFinkler/HelpDeskAPIBack
 * Link do Repositório GitHub (Frontend): https://github.com/BeFinkler/HelpDeskAPIFront
 ```
